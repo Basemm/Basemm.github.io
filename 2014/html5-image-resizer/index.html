@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>HTML5 Image Resizer - Bassem</title>
+  <meta name="author" content="Bassem">
+
+  
+  <meta name="description" content="Resizing images in the browser with HTML5 new features">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://basemm.github.io/2014/html5-image-resizer/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Bassem" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47059705-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Bassem</a></h1>
+  
+    <h2>App architecture, Abstractions, Programing and Webdev</h2>
+  
+</hgroup>
+
+
+<div class="social-icons">
+  <a href="https://github.com/Basemm"><img src="/images/github-mark-light-32px.png" width="32" height="32" alt="Github"></a>
+  <a href="https://twitter.com/_Basemm_"><img src="/images/twitter-32x32.png" width="32" height="32" alt="Twitter"></a>
+  <a href="http://eg.linkedin.com/pub/basem-mostafa/12/479/182/"><img src="/images/linkedin_circle_color-32.png" width="32" height="32" alt="Linkdln"></a>
+  <a href="/atom.xml"><img src="/images/rss-32x32.png" width="32" height="32" alt="RSS"></a>
+</div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="basemm.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/pages/contact-me">Contact Me</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">HTML5 Image Resizer</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-06-07T01:08:49+03:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:08 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Many have already experimented with resizing images in the browser using the canvas element, but all
+I saw were just experiments for resizing one image that’s understandable as many of it were relatively
+old “2-3 years ago”, browsers were slower also many people are still considering browsers not good enough
+for such computationally intensive tasks. But now as browsers are becoming more and more efficient at doing this
+tasks even performing quite as good as ImageMagick! &ldquo;see results below&rdquo;. So I decided to make an app to resize
+images in the browser &amp; generate zip file.
+<a href="http://dbasem.com/my-apps/html5-img-resizer/">Here it is</a> and <a href="https://github.com/Basemm/html5-img-resizer">Github repo</a></p>
+
+<p><img class="center" src="https://raw.githubusercontent.com/Basemm/html5-img-resizer/master/screenshot.png" title="HTML5 Image Resize App Screenshot" alt="HTML5 Image Resize App Screenshot"></p>
+
+<h2>Features:</h2>
+
+<ul>
+<li><p>Quick way to resize images, no need to download &amp; install a dedicated app also you won’t
+need to upload your files to any of online image resizing websites. Resize the image directly in your browser!</p></li>
+<li><p>Fast “tested in Chrome, quite as fast as ImageMagik convert!”</p></li>
+<li><p>Accept png and jpeg</p></li>
+<li><p>Set jpeg quality</p></li>
+<li><p>Resize to fixed dimensions “preserve aspect ratio” or use percentages</p></li>
+</ul>
+
+
+<h2>Caveats:</h2>
+
+<ul>
+<li><p>Unlike ImageMagick, browsers can’t directly persist each resized image
+on disk so the whole process run in memory &amp; generate zip file for all of
+them at the end. Obviously it won’t scale when used with hundreds of large
+images.</p></li>
+<li><p>Repeatedly resizing lots of images without page refresh will slow down the browser due to a memory leak,
+it need further checks.</p></li>
+</ul>
+
+
+<h2>Benchmark in Chrome vs ImageMagick convert:</h2>
+
+<p><strong>Scaling 100 PNG images &ldquo;424 MB&rdquo; down by 50%</strong></p>
+
+<ul>
+<li><p>Chrome: 1 minute, 12 seconds &ldquo;72851 millisecond&rdquo;</p></li>
+<li><p>ImageMagick convert: 1 minute, 10 seconds</p></li>
+</ul>
+
+
+<p><strong>Test run in</strong></p>
+
+<ul>
+<li><p>Chrome version: 35.0.1916.153</p></li>
+<li><p>OS: ubuntu 14.04LTS, 64bit</p></li>
+<li><p>Processor: Intel® Pentium&reg; CPU G630 @ 2.70GHz × 2</p></li>
+<li><p>Memory: 8 GB</p></li>
+</ul>
+
+
+<h2>Notes:</h2>
+
+<ul>
+<li><p>Chrome numbers cover also generating &amp; saving the zip file, so it
+could actually perform better if there’s a way to provide the images to user
+directly in a friendly way without zip compression.</p></li>
+<li><p>The 100 images in above test is not a limit by any means, it depends on your machine and you can go beyond this number!</p></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Bassem</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-06-07T01:08:49+03:00'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>7</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>1:08 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/apps/'>apps</a>, <a class='category' href='/blog/categories/canvas/'>canvas</a>, <a class='category' href='/blog/categories/html5/'>html5</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/opensource/'>opensource</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://basemm.github.io/2014/html5-image-resizer/" data-via="_Basemm_" data-counturl="http://basemm.github.io/2014/html5-image-resizer/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2014/nodejs-read-line-by-line-with-es6-generators/" title="Previous Post: Nodejs read line by line with ES6 generators">&laquo; Nodejs read line by line with ES6 generators</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/apps' style='font-size: 130.0%'>apps</a> <a href='/blog/categories/canvas' style='font-size: 130.0%'>canvas</a> <a href='/blog/categories/ecmascript-6' style='font-size: 130.0%'>ecmascript-6</a> <a href='/blog/categories/html5' style='font-size: 130.0%'>html5</a> <a href='/blog/categories/javascript' style='font-size: 160.0%'>javascript</a> <a href='/blog/categories/nodejs' style='font-size: 130.0%'>nodejs</a> <a href='/blog/categories/opensource' style='font-size: 130.0%'>opensource</a> </span>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Bassem -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'basemmostafa';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://basemm.github.io/2014/html5-image-resizer/';
+        var disqus_url = 'http://basemm.github.io/2014/html5-image-resizer/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

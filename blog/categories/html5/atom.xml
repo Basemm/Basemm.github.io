@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Html5 | Bassem]]></title>
+  <link href="http://basemm.github.io/blog/categories/html5/atom.xml" rel="self"/>
+  <link href="http://basemm.github.io/"/>
+  <updated>2015-02-25T01:18:42+02:00</updated>
+  <id>http://basemm.github.io/</id>
+  <author>
+    <name><![CDATA[Bassem]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5 Image Resizer]]></title>
+    <link href="http://basemm.github.io/2014/html5-image-resizer/"/>
+    <updated>2014-06-07T01:08:49+03:00</updated>
+    <id>http://basemm.github.io/2014/html5-image-resizer</id>
+    <content type="html"><![CDATA[<p>Many have already experimented with resizing images in the browser using the canvas element, but all
+I saw were just experiments for resizing one image that’s understandable as many of it were relatively
+old “2-3 years ago”, browsers were slower also many people are still considering browsers not good enough
+for such computationally intensive tasks. But now as browsers are becoming more and more efficient at doing this
+tasks even performing quite as good as ImageMagick! &ldquo;see results below&rdquo;. So I decided to make an app to resize
+images in the browser &amp; generate zip file.
+<a href="http://dbasem.com/my-apps/html5-img-resizer/">Here it is</a> and <a href="https://github.com/Basemm/html5-img-resizer">Github repo</a></p>
+
+<p><img class="center <a" src="href="https://raw.githubusercontent.com/Basemm/html5-img-resizer/master/screenshot.png">https://raw.githubusercontent.com/Basemm/html5-img-resizer/master/screenshot.png</a>&#8221; title=&#8221;&lsquo;HTML5 Image Resize App Screenshot&rsquo; &lsquo;HTML5 Image Resize App Screenshot&rsquo;&#8221; ></p>
+
+<h2>Features:</h2>
+
+<ul>
+<li><p>Quick way to resize images, no need to download &amp; install a dedicated app also you won’t
+need to upload your files to any of online image resizing websites. Resize the image directly in your browser!</p></li>
+<li><p>Fast “tested in Chrome, quite as fast as ImageMagik convert!”</p></li>
+<li><p>Accept png and jpeg</p></li>
+<li><p>Set jpeg quality</p></li>
+<li><p>Resize to fixed dimensions “preserve aspect ratio” or use percentages</p></li>
+</ul>
+
+
+<h2>Caveats:</h2>
+
+<ul>
+<li><p>Unlike ImageMagick, browsers can’t directly persist each resized image
+on disk so the whole process run in memory &amp; generate zip file for all of
+them at the end. Obviously it won’t scale when used with hundreds of large
+images.</p></li>
+<li><p>Repeatedly resizing lots of images without page refresh will slow down the browser due to a memory leak,
+it need further checks.</p></li>
+</ul>
+
+
+<h2>Benchmark in Chrome vs ImageMagick convert:</h2>
+
+<p><strong>Scaling 100 PNG images &ldquo;424 MB&rdquo; down by 50%</strong></p>
+
+<ul>
+<li><p>Chrome: 1 minute, 12 seconds &ldquo;72851 millisecond&rdquo;</p></li>
+<li><p>ImageMagick convert: 1 minute, 10 seconds</p></li>
+</ul>
+
+
+<p><strong>Test run in</strong></p>
+
+<ul>
+<li><p>Chrome version: 35.0.1916.153</p></li>
+<li><p>OS: ubuntu 14.04LTS, 64bit</p></li>
+<li><p>Processor: Intel® Pentium&reg; CPU G630 @ 2.70GHz × 2</p></li>
+<li><p>Memory: 8 GB</p></li>
+</ul>
+
+
+<h2>Notes:</h2>
+
+<ul>
+<li><p>Chrome numbers cover also generating &amp; saving the zip file, so it
+could actually perform better if there’s a way to provide the images to user
+directly in a friendly way without zip compression.</p></li>
+<li><p>The 100 images in above test is not a limit by any means, it depends on your machine and you can go beyond this number!</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

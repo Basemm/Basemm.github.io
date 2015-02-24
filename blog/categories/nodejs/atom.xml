@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Nodejs | Bassem]]></title>
+  <link href="http://basemm.github.io/blog/categories/nodejs/atom.xml" rel="self"/>
+  <link href="http://basemm.github.io/"/>
+  <updated>2015-02-25T01:18:42+02:00</updated>
+  <id>http://basemm.github.io/</id>
+  <author>
+    <name><![CDATA[Bassem]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Nodejs Read Line by Line With ES6 Generators]]></title>
+    <link href="http://basemm.github.io/2014/nodejs-read-line-by-line-with-es6-generators/"/>
+    <updated>2014-04-10T00:07:55+02:00</updated>
+    <id>http://basemm.github.io/2014/nodejs-read-line-by-line-with-es6-generators</id>
+    <content type="html"><![CDATA[<p>For many languages it’s a simple operation no one even need to ask about it just read the docs, but in
+nodejs it’s a different story u have <a href="http://stackoverflow.com/questions/6156501/read-a-file-one-line-at-a-time-in-node-js">SO question currently with 87 upvotes</a>
+&amp; <a href="https://github.com/nickewing/line-reader">many</a> <a href="https://github.com/jahewson/node-byline">different</a> libraries to deal with it!</p>
+
+<p>The problem is actually not with reading lines from small files as u can simply do</p>
+
+<pre><code class="javascript">var fs = require('fs')
+
+fs.readFile('test.txt', {encoding: 'utf8'}, function (err, data) {
+    var lines = data.split('\n')
+
+    console.info(lines)
+})
+</code></pre>
+
+<p>Which load the whole file into memory but that won’t be efficient with large files, that’s the reason
+behind the question &amp; many libs.</p>
+
+<p>With ES6 becoming more and more common I decided to use a cool feature of it called generators to have
+a nice &amp; clean solution. <a href="https://gist.github.com/Basemm/9700229">here’s the gist</a></p>
+
+<blockquote><p>Please note that the script is sync, If you want async/lazy loading solution, have a look at <a href="https://github.com/dtao/lazy.js">lazy.js</a></p></blockquote>
+
+<p>How it’s used:</p>
+
+<pre><code class="javascript">readLineSync = require('./readLineSync')
+
+for(var line of readLineSync('test.txt')) {
+    console.info(line)
+}
+
+//========================================
+//or with while loop
+
+file = readLineSync('test.txt')
+
+next = file.next()
+
+while(!next.done) {
+    console.info(next.value)
+    next = file.next()
+}
+</code></pre>
+
+<p>After calling ‘readLineSync’ with the target file you are able to read lines by calling “file.next()”
+&amp; process the line and when ready get next line or for simplicity use the generator with
+&ldquo;for of&rdquo; loop as in the first example</p>
+
+<p>Note that you need to use node >= 0.11 &amp; run your script with flag &ldquo;&ndash;harmony&rdquo;, ex:</p>
+
+<pre><code>node --harmony testscript
+</code></pre>
+
+<p>It benefit from generators feature that allow saving function state between “.next()” calls,
+allowing the function to keep track of current position in the file.</p>
+
+<p><strong>So when to use it</strong></p>
+
+<p>As it run synchronously it won&rsquo;t be of great benefit for public websites as it won&rsquo;t benefit much
+from node main feature which is async calls &ldquo;the main reason behind node speed&rdquo;. It could be used for ex in
+a script automating a task on your machine that it&rsquo;s operation depend on reading large files line by line to
+process it, so reading the file sync or async dosn&rsquo;t matter as you will be waiting/doing nothing in both cases
+until the line is read to process it and you would have a clean code without async callbacks!</p>
+
+<p><strong>Note</strong> that it blocks execution only while getting a new line as we are not reading the whole file all
+at once also not all calls to “next()” would need disk access due to use of a buffer.</p>
+]]></content>
+  </entry>
+  
+</feed>
