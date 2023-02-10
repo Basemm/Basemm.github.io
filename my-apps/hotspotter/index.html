@@ -7,9 +7,13 @@
         <link rel="stylesheet" type="text/css" href="css/demos.min.css" />
         <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="css/demos-ie7-8.min.css" /><![endif]-->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery-hotspotter.min.css" />
+
+        <link rel="stylesheet" href="css/jquery-hotspotter.min.css">
+
         <!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="css/ie7-8.min.css" /><![endif]-->
+
         <link rel="stylesheet" type="text/css" href="Editor/css/ui-darkness/jquery-ui-1.9.2.custom.min.css" />
+
         <style type="text/css">
             .media {
                 margin-bottom: 50px;
@@ -62,14 +66,13 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <ul class="nav"  id="top-menu">
-                    <li class="active"><a href="http://dbasem.com/blog/">Home</a></li>
+                    <li class="active"><a href="index.html">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             Features
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu" id="features-menu">
-                            <li><a href="#who_use_it">Who use it?</a></li>
                             <li><a href="#default_spots_tooltips">Default Spots & Tooltips</a></li>
                             <li><a href="#aiming_effect">Aiming Effect</a></li>
                             <li><a href="#responsive_fluid">Responsive & Fluid</a></li>
@@ -146,44 +149,6 @@
 
         </div>
 
-        <section id="who_use_it">
-            <div class="page-header line">
-                <h1>Who Use It?</h1>
-            </div>
-
-            <div class="media">
-              <a class="pull-left" href="#">
-                <img class="media-object" src="http://s11.postimg.org/3wr1830en/318eb2f.png" alt="Xerox Logo">
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Xerox Canada</h4>
-                Use hotspotter in IBM websphere commerce based B2B webapp.
-                They use a slightly modified Editor with the jquery plugin to allow customers to
-                easily customize products while making it easy for webapp owner employees to mark
-                customizable parts.
-              </div>
-            </div>
-
-            <div class="media">
-              <a class="pull-left" href="#">
-                <img class="media-object" src="http://s7.postimg.org/g2atoyhrr/1d57d01.png" alt="Green Peace International Logo">
-              </a>
-              <div class="media-body">
-                <h4 class="media-heading">Green Peace International</h4>
-
-                <a href="http://www.greenpeace.org/international/Global/international/code/2013/png/index.html" alt="GreenPeace Logo">
-                    See it in action!
-                </a>
-              </div>
-            </div>
-
-            <p>
-                Many other happy web design agencies & freelancers around the world, here's some reviews in CodeCanyon:
-            </p>
-
-            <img src="http://s2.postimg.org/ujevehzy1/happy_hotspotter_customers.jpg" alt="Reviews on Codecanyon">
-        </section>
-
         <section id="default_spots_tooltips">
             <div class="page-header line">
                 <h1>Default Spots & Tooltips</h1>
@@ -226,7 +191,7 @@
                     <div class="hs-wrap">
                         <a href="http://en.wikipedia.org/wiki/Chalet" target="_blank"><div data-activeon="hover" data-dim="49,39,7" data-coord="410,162" data-name="chalet" class="glass-spot"></div></a>
                         <div class="tt-wrap">
-                            <div data-dir="left" data-pos="10" data-anim="goin" class="tip-tooltip">
+                            <div data-dir="left" data-pos="10" data-anim="fade" class="tip-tooltip">
                                 <div style="height:145px;width:425px;">
                                     <img src="img/chalet.jpg" style="width:200px;float:left;">
                                     <p style="padding-left:210px;margin:0"><strong>Swiss Chalet: </strong>is a type of building or house, native
@@ -286,7 +251,7 @@
                     </div>
                 </div>
                 <div class="hs-wrap">
-                    <div data-handler="Aim" data-activeon="hover" data-dim="51,52,7" data-coord="363,127"
+                    <div data-handler="Aim" data-activeon="click" data-dim="51,52,7" data-coord="363,127"
                          class="red-spot"></div>
                     <div class="tt-wrap">
                         <div data-width="400" data-dir="right" class="aim-tooltip">
@@ -522,47 +487,47 @@
                 </tr>
                 <tr>
                     <td id="control-btns">
-                        <p><button class="btn btn-inverse" id="mercury">Mercury</button></p>
-                        <p><button class="btn btn-inverse" id="venus">Venus</button></p>
-                        <p><button class="btn btn-inverse" id="earth">Earth</button></p>
-                        <p><button class="btn btn-inverse" id="mars">Mars</button></p>
-                        <p><button class="btn btn-inverse" id="jupiter">Jupiter</button></p>
-                        <p><button class="btn btn-inverse" id="saturn">Saturn</button></p>
-                        <p><button class="btn btn-inverse" id="uranus">Uranus</button></p>
-                        <p><button class="btn btn-inverse" id="neptune">Neptune</button></p>
+                        <p><button class="btn btn-inverse">Mercury</button></p>
+                        <p><button class="btn btn-inverse">Venus</button></p>
+                        <p><button class="btn btn-inverse">Earth</button></p>
+                        <p><button class="btn btn-inverse">Mars</button></p>
+                        <p><button class="btn btn-inverse">Jupiter</button></p>
+                        <p><button class="btn btn-inverse">Saturn</button></p>
+                        <p><button class="btn btn-inverse">Uranus</button></p>
+                        <p><button class="btn btn-inverse">Neptune</button></p>
                     </td>
                     <td>
                         <div class="hs-area" id="controlled-area">
                             <img src="img/galaxy.jpg">
                             <div class="hs-wrap">
-                                <div data-activeon="hover" data-dim="18,18,3" data-coord="95.75,155" class="red-spot" id="mercury-spot"></div>
+                                <div data-activeon="hover" data-dim="18,18,3" data-coord="95.75,155" class="red-spot" id="Mercury"></div>
                                 <div class="tt-wrap">
                                     <div data-pos="9" data-dir="left" data-anim="goin" class="tip-tooltip">Mercury</div>
                                 </div>
                             </div>
                             <div class="hs-wrap">
                                 <div data-activeon="hover" data-dim="30,29,0" data-coord="131.75,134"
-                                     class="invisible-spot" id="venus-spot"></div>
+                                     class="invisible-spot" id="Venus"></div>
                                 <div class="tt-wrap">
                                     <div data-pos="11" data-dir="top" data-anim="goin" class="tip-tooltip white">Venus</div>
                                 </div>
                             </div>
                             <div class="hs-wrap">
                                 <div data-activeon="hover" data-dim="26,25,0" data-coord="176.75,112"
-                                     class="invisible-spot" id="earth-spot"></div>
+                                     class="invisible-spot" id="Earth"></div>
                                 <div class="tt-wrap">
                                     <div data-pos="-10" data-width="90" data-anim="fade" class="bubble-tooltip">Our Cool Planet!</div>
                                 </div>
                             </div>
                             <div class="hs-wrap">
-                                <div data-activeon="hover" data-dim="25,24,39" data-coord="205,84" class="onhover-spot" id="mars-spot"></div>
+                                <div data-activeon="hover" data-dim="25,24,39" data-coord="205,84" class="onhover-spot" id="Mars"></div>
                                 <div class="tt-wrap">
                                     <div data-pos="10" data-dir="bottom" data-anim="goin" class="tip-tooltip white">Mars</div>
                                 </div>
                             </div>
                             <div class="hs-wrap">
                                 <div data-handler="Aim" data-activeon="hover" data-dim="60,58,16" data-coord="260,79"
-                                     class="red-spot" id="jupiter-spot"></div>
+                                     class="red-spot" id="Jupiter"></div>
                                 <div class="tt-wrap">
                                     <div  data-dir="right" class="aim-tooltip">
                                         <div class="tt-content">
@@ -606,19 +571,19 @@
                                 </div>
                             </div>
                             <div class="hs-wrap">
-                                <div data-activeon="hover" data-dim="59,49,0" data-coord="335,51" class="invisible-spot" id="saturn-spot"></div>
+                                <div data-activeon="hover" data-dim="59,49,0" data-coord="335,51" class="invisible-spot" id="Saturn"></div>
                                 <div class="tt-wrap">
                                     <div data-pos="25" data-dir="top" data-anim="goin" class="tip-tooltip white">Saturn</div>
                                 </div>
                             </div>
                             <div class="hs-wrap">
-                                <div data-activeon="hover" data-dim="44,42,15" data-coord="402,22" class="glass-spot" id="uranus-spot"></div>
+                                <div data-activeon="hover" data-dim="44,42,15" data-coord="402,22" class="glass-spot" id="Uranus"></div>
                                 <div class="tt-wrap">
                                     <div data-pos="20" data-dir="bottom" data-anim="goin" class="tip-tooltip white">Uranus</div>
                                 </div>
                             </div>
                             <div class="hs-wrap">
-                                <div data-activeon="hover" data-dim="37,36,0" data-coord="454.75,0" class="invisible-spot" id="neptune-spot"></div>
+                                <div data-activeon="hover" data-dim="37,36,0" data-coord="454.75,0" class="invisible-spot" id="Neptune"></div>
                                 <div class="tt-wrap">
                                     <div data-pos="15" data-dir="right" data-anim="goin" class="tip-tooltip white">Neptune</div>
                                 </div>
@@ -665,10 +630,11 @@ $(<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>#myspot</s
         <p style="text-align: center;font-size: 12px;">Lungern image provided by Michael Siegenthaler <a href="http://www.msigi.net/" target="_blank">http://www.msigi.net</a></p>
 
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/jquery-hotspotter.min.js"></script>
+
+        <script src="js/jquery-hotspotter.min.js"></script>
 
         <script type="text/javascript">
             $('.hs-area').hotspotter({imgTopMargin: 50});
@@ -680,35 +646,23 @@ $(<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>#myspot</s
                 }
             });
 
-            $('#control-btns').mouseover( function(e) {
-                if (e.target.tagName === 'BUTTON') {
-                    $('#' + e.target.id + '-spot').hotspotter('trigger');
+            $('#control-btns').bind('mouseover', function(e) {
+                if (e.target.tagName == 'BUTTON') {
+                    $('#' + $(e.target).text()).hotspotter('trigger');
+                }
+            });
+            $('#control-btns').bind('mouseout', function(e) {
+                if (e.target.tagName == 'BUTTON') {
+                    $('#' + $(e.target).text()).hotspotter('untrigger');
                 }
             });
 
-            $('#control-btns').mouseout( function(e) {
-                if (e.target.tagName === 'BUTTON') {
-                    $('#' + e.target.id + '-spot').hotspotter('untrigger');
-                }
-            });
-
-            $('#show-btn').click( function() {
+            $('#show-btn').bind('click', function() {
                 $('#controlled-area').hotspotter("show");
             });
-
-            $('#hide-btn').click( function() {
+            $('#hide-btn').bind('click', function() {
                 $('#controlled-area').hotspotter("hide");
             });
-        </script>
-
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-47059705-1', 'dbasem.com');
-          ga('send', 'pageview');
         </script>
     </body>
 </html>
