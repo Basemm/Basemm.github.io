@@ -624,7 +624,10 @@ $(<span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>#myspot</s
         <script src="js/jquery-hotspotter.min.js"></script>
 
         <script type="text/javascript">
-            $('.hs-area').hotspotter({imgTopMargin: 50});
+
+            setTimeout(() => {
+                $('.hs-area').hotspotter({imgTopMargin: 50});
+            }, 10)
 
             $('#resize').resizable({
                 aspectRatio: true,
